@@ -1,0 +1,118 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #7a7a7a;
+}
+.options-menu{
+    display: flex;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    column-gap: 20px;
+    align-items: center
+}
+.newgame-btn{
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    border-radius: 18px;
+    border: 0;
+    padding: 10px 8px 10px 8px;
+    background-color: #3F88E8;
+    box-shadow:4px 4px 20px rgba(0,0,0,0.35);
+}
+.newgame-btn:hover{
+    background-color: #385b8a;
+}
+.bomb-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min-content;
+}
+.bomb-index-header{
+    color: white;
+    width: 100%;
+    text-shadow: 0px 2px 7px black;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+}
+.bomb-index{
+    resize: vertical;
+    padding:5px;
+    border-radius:15px;
+    border:1px;
+    box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+    height:auto;
+    width: 50%;
+    font-size: 24px;
+}
+.map{
+    display: grid;
+    gap: 3px;
+    background-color: rgb(228, 248, 255);
+    grid-template-rows: repeat(12, 30px);
+    grid-template-columns: repeat(12, 30px);
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+.element{
+    background: rgb(67, 119, 106);
+    font-size: 23px;
+    text-align: center;
+    padding-top: 3px;
+}
+
+.opened{
+    background: rgb(155, 162, 129);
+}
+
+.bomb{
+    background: rgb(114, 41, 41);
+}
+
+.element:hover{
+    background: gray;
+}
+
+.bomb::after{
+    content: '';
+    background-image: url('../images/mine.png');
+    background-size: 30px 30px;
+    display: block;
+    position: relative;
+    
+    height: 30px;  
+    width: 30px;
+
+    left: 0;
+    top: -10%;
+
+}
+.flag::after{
+    content: '';
+    background-image: url('../images/flag.png');
+    background-size: 30px 30px;
+    display: block;
+    position: relative;
+    
+    height: 30px;  
+    width: 30px;
+
+    left: 0;
+    top: -10%;
+
+}
+
+.highlighted{
+    background: gray;
+}

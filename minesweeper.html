@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>MineSweeeper</title>
+	<style>
+	.mw{
+		display:grid;
+		grid-template-columns: repeat(5, 44px);
+		grid-gap: 6px;
+	}
+	.mw-cell{
+		display:flex;
+		align-content:center;
+		align-items: center;
+		justify-content: center;
+		width: 44px;
+		height: 44px;
+		border: solid 1px #707070;
+		background: #BBBBBB;
+		cursor: pointer;
+	}
+	.mw-cell--open{
+		background: white;
+		cursor: default;
+	}
+	.mw-cell--mark{
+		background: white;
+	}
+	.mw-cell--mark:before{
+		content: "📌";
+	
+	}
+	mw-cell--bomb{
+		background: #c42828;
+	}
+	mw-cell--bomb:before{
+		content: "💣";
+	
+	}
+	</style>
+	<script>
+		document.addEventListener('DOMContentLoaded', e => {
+			
+			const mw = document.querySelector('.mw');
+			const width = 12;
+			const height = 12;
+			const bombCount = 5;
+			
+			//mw.style.gridTemplateColumns = 'repeat(' + width + ', 44px)';
+			mw.style.setProperty('--columns-count', width);
+			for (let y = 0; y < width; y++) {
+				for (let x = 0; x < height; x++){
+					let mwCell = document.createElement('div');
+					mwCell.className = 'mw-cell';
+					mwCell.x = x;
+					mwCell.y = y;
+					mw.append(mwCell);
+				}
+			}
+			let gameStarted = false;
+			mw.addEventListener('click', e => {
+				const t = e.target;
+				if (t.classList.contains('mw-cell')){
+					if (!gameStarted) {
+						startGame();
+					}
+					console.log(t.x, t.y);
+				}
+			
+			});
+			
+			let startGame = () => {
+				gameStarted = true;
+			};
+			
+			let bombMap = [];
+			
+			let createBombs = () => {
+				bombMap = [];
+				FOR ()
+				
+			}
+		
+		});
+	</script>
+	</head>
+<body>
+	<div class="mw"></div>
+</body>
