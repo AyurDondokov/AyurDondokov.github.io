@@ -1,6 +1,6 @@
 body{
     font-family: Arial, sans-serif;
-    background-color: #7a7a7a;
+    background-color: #aa9b9b;
 }
 .options-menu{
     display: flex;
@@ -20,11 +20,11 @@ body{
     border-radius: 18px;
     border: 0;
     padding: 10px 8px 10px 8px;
-    background-color: #3F88E8;
+    background-color: #ff2121;
     box-shadow:4px 4px 20px rgba(0,0,0,0.35);
 }
 .newgame-btn:hover{
-    background-color: #385b8a;
+    background-color: #8a3838;
 }
 .bomb-input{
     display: flex;
