@@ -210,7 +210,7 @@
         }
         if (e.key == 'ArrowUp' && map[trY-1])
             trY--;
-        else if (e.key == 'ArrowDown' && map[trY+1][trX])
+        else if (e.key == 'ArrowDown' && map[trY+1])
             trY++;
         else if (e.key == 'ArrowRight' && map[trY][trX+1])
             trX++;
