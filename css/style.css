@@ -116,3 +116,23 @@ body{
 .highlighted{
     background: gray;
 }
+
+.lose::after{
+    display:block;
+    position:absolute;
+    content: url('../images/lose.png');
+    max-width: 1000px;
+    max-height: 600px;
+    left: -100%;
+    top: -30%;
+}
+
+.win::after{
+    display:block;
+    position:absolute;
+    content: url('../images/win.png');
+    max-width: 1000px;
+    max-height: 600px;
+    left: -55%;
+    top: -30%;
+}

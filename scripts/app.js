@@ -125,25 +125,35 @@
             }
         }
         setTimeout(function () {
-            alert("You win!")
+            alert("Пятилетку за три года! Так держать, товарищ!");
+            mapElement.classList.add('win');
         }, 300);
+
+        setTimeout(function () {
+            mapElement.classList.remove('win');
+        }, 4000);
     }
     function Lose(){
         isGameOver = true;
         for (let y = 0; y < size; y++){
             for (let x = 0; x < size; x++){
                 let cell = map[y][x];
-                if (bombMap[y][x] == -1)
-                {
+                if (bombMap[y][x] > 0)
+                    map[y][x].textContent =  bombMap[y][x];
+                else if (bombMap[y][x] == -1)
                     cell.classList.add('bomb');
-                }
                 cell.classList.remove('flag');
                 cell.classList.add("opened");
             }
         }
         setTimeout(function () {
-            alert("You loser!")
+            alert("Тебя отправили в ГУЛАГ! Вы капиталист!");
+            mapElement.classList.add('lose');
         }, 300);
+
+        setTimeout(function () {
+            mapElement.classList.remove('lose');
+        }, 4000);
     }
 
     function step(elem){
