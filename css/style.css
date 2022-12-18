@@ -120,7 +120,7 @@ body{
 .lose::after{
     display:block;
     position:absolute;
-    content: url('../images/lose.png');
+    content: url('../images/lose.PNG');
     max-width: 1000px;
     max-height: 600px;
     left: -100%;
