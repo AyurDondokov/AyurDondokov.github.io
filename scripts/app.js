@@ -200,8 +200,8 @@
     }
     
     bombIndex.addEventListener('change', e => {
-        if (bombIndex.value > 121)
-            bombIndex.value = 121;
+        if (bombIndex.value > 143)
+            bombIndex.value = 143;
         bombCount = bombIndex.value;
     })
     newgameBtn.addEventListener('click', e => {
