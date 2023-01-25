@@ -102,7 +102,7 @@
         while (count < bombCount){
             let x = getRandomInt(0, size);
             let y = getRandomInt(0, size);
-            if (bombMap[y][x] !== -1 && !map[y][x].classList.contains('opened') && xE !== x && yE !== y){
+            if (bombMap[y][x] !== -1 && !map[y][x].classList.contains('opened') && !(xE == x && yE == y)){
                 bombMap[y][x] = -1;
                 count++;
             }
@@ -200,8 +200,8 @@
     }
     
     bombIndex.addEventListener('change', e => {
-        if (bombIndex.value > 99)
-            bombIndex.value = 99;
+        if (bombIndex.value > 121)
+            bombIndex.value = 121;
         bombCount = bombIndex.value;
     })
     newgameBtn.addEventListener('click', e => {
